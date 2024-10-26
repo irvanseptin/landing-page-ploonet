@@ -13,4 +13,5 @@ export interface CardProps {
   rightCardSubTitle: string
   leftSteps?: Steps[]
   rightSteps?: Steps[]
+  footnotes?: string | React.ReactNode
 }

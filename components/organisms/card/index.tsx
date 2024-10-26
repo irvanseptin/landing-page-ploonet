@@ -13,9 +13,10 @@ const Card: React.FC<CardProps> = ({
   rightCardSubTitle,
   leftSteps,
   rightSteps,
+  footnotes,
 }) => {
   return (
-    <div className="bg-black py-4 pt-52 text-center">
+    <div className="bg-black py-4 pt-52 pb-52 text-center">
       <Title title={title} isWithDot className="font-semibold mb-6"/>
 
       <div className="flex flex-col w-full md:w-[1610px] mx-auto md:flex-row gap-8">
@@ -101,8 +102,7 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <Text variant="p" className="text-[#999999] py-12">
-        * 2~3분, 표준 견적에 따르는 일반 영상편집에 한정되며,  모션그래픽 등 전문 작업이 필요할 경우 작업 기간은 조정될 수 있습니다.<br/>
-        ** 영상의 길이, 영상 제작에 필요한 수준에 따라 빠른 작업이 불가할 수 있으며, 클라이언트와의 협의를 통해 작업 기간을 조정할 수 있습니다.
+        {footnotes}
       </Text>
     </div>
   )
