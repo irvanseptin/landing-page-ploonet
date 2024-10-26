@@ -1,4 +1,5 @@
 import About from '@/components/organisms/about'
+import Contact from '@/components/organisms/contact'
 import Text from '@/components/atoms/text'
 import Header from "@/components/organisms/header"
 import Banner from "@/components/molecules/banner"
@@ -129,6 +130,19 @@ export default function Home() {
             </>
           },
         ]}
+        footnotes={
+          <>
+            * 2~3분, 표준 견적에 따르는 일반 영상편집에 한정되며,  모션그래픽 등 전문 작업이 필요할 경우 작업 기간은 조정될 수 있습니다.<br/>
+            ** 영상의 길이, 영상 제작에 필요한 수준에 따라 빠른 작업이 불가할 수 있으며, 클라이언트와의 협의를 통해 작업 기간을 조정할 수 있습니다.
+          </>
+        }
+      />
+      <Contact
+        subTitle="영상 제작 문의"
+        title={<><strong>영상 제작이 필요하다면</strong>, <span className="font-light">지금 문의 주세요.</span></>}
+        description="여러분이 필요한 영상을 빠르게 제작하기 위해 플루닛 영상제작소가 즉시 연락 드리겠습니다."
+        email="henry.lim@saltlux.com"
+        additionalInfo="*  참고할만한 영상이나 원하시는 영상과 유사한 영상의 링크 주소를 적어주시면 더 정확히 안내해드리겠습니다."
       />
     </>
   );

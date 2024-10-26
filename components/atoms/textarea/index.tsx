@@ -1,7 +1,7 @@
 import React from 'react'
-import { TextareaProps } from './textarea.interface'
+import { TextAreaProps } from './textarea.interface'
 
-const Textarea: React.FC<TextareaProps> = ({
+const Textarea: React.FC<TextAreaProps> = ({
   placeholder,
   className,
   ...props

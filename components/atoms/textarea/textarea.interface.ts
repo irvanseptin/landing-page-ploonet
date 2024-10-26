@@ -1,4 +1,4 @@
-export interface TextareaProps {
+export interface TextAreaProps {
   placeholder?: string
   className?: string
 }
