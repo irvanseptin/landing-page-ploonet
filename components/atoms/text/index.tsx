@@ -10,7 +10,7 @@ const Text: React.FC<TextProps> = ({
   const baseClass = {
     h1: 'text-[44px]',
     h2: 'text-3xl font-semibold',
-    h3: 'text-2xl font-medium',
+    h3: 'text-2xl',
     p: 'text-base',
     span: 'text-sm',
     small: 'text-xs',
@@ -21,10 +21,10 @@ const Text: React.FC<TextProps> = ({
   return (
     <Component
       className={`${baseClass[variant]} ${className}`}
-      style={{
+      style={isPrimary ? {
         background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
         WebkitBackgroundClip: 'text',
-      }}
+      } : {}}
     >
       {isPrimary ? (
         <span
