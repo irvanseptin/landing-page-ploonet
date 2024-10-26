@@ -36,7 +36,7 @@ const Menu: React.FC<MenuProps> = ({
               onClick={() => handleClick(menu.label)}
             >
               {menu.label}
-              {menu?.isActive && <IconDot className="mt-7 absolute"/>}
+              {menu?.isActive && <IconDot width={8} height={8} className="mt-7 absolute"/>}
             </Button>
           ))}
         </div>
