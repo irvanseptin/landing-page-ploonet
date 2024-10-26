@@ -1,5 +1,6 @@
 import GradientCircle from "@/components/molecules/gradientCircle"
 import Text from "@/components/atoms/text"
+import Title from '@/components/molecules/title'
 
 import { AboutProps } from "./about.interface";
 
@@ -11,9 +12,8 @@ const About: React.FC<AboutProps> = ({
 }) => {
   return (
     <div className="bg-black pb-20">
-      <div className="bg-black w-[337px] md:w-[844px] mx-auto p-6 text-center pt-24 pb-12">
-        <Text variant="h3" className="mb-4" isPrimary>{title}</Text>
-        <Text variant="h1">{subTitle}</Text>
+      <div className="bg-black w-[337px] md:w-[844px] mx-auto p-6 text-center pt-24">
+        <Title title={title} subTitleTop={subTitle} />
       </div>
 
       <div className="mx-auto text-center">

@@ -1,6 +1,6 @@
 export interface AboutProps {
-  title: string
-  subTitle: string | React.ReactNode
+  title: string | React.ReactNode
+  subTitle: string
   infos: {
     title: string
     subTitle?: string
