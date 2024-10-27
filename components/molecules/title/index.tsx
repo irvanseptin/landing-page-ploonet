@@ -8,13 +8,14 @@ const Title: React.FC<TitleProps> = ({
   isWithDot,
   subTitleTop,
   className,
+  isSubTitleTopMobile,
 }) => {
   return (
     <>
-      {subTitleTop && <Text variant="h3" className="mb-4" isPrimary>{subTitleTop}</Text>}
+      {subTitleTop && <Text variant="h3" className={`mb-4 ${!isSubTitleTopMobile && 'hidden md:block'}`} isPrimary>{subTitleTop}</Text>}
       <div className="relative flex justify-center items-flex-start">
-        {isWithDot && <IconDot width={16} height={16}/>}
-        <Text variant="h1" className={`text-center pb-8 ${className}`}>
+        {isWithDot && (<IconDot className="w-[8px] h-[8px] md:w-[16px] md:h-[16px]" />)}
+        <Text variant="h1" className={`text-center pt-1 md:pt-4 pb-8 ${className}`}>
           {title}
         </Text>
       </div>

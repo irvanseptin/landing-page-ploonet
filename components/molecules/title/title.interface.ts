@@ -3,4 +3,5 @@ export interface TitleProps {
   isWithDot?: boolean
   subTitleTop?: string
   className?: string
+  isSubTitleTopMobile?: boolean
 }

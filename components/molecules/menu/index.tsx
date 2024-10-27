@@ -29,8 +29,9 @@ const Menu: React.FC<MenuProps> = ({
     <>
       {!isVertical ? (
         <div className="hidden md:flex items-center gap-[55px] xl:gap-[20px] 2xl:gap-[15px]">
-          {menuList.map(menu => (
+          {menuList.map((menu, index) => (
             <Button
+              key={index}
               variant="text"
               className={buttonClass(menu?.isActive)}
               onClick={() => handleClick(menu.label)}

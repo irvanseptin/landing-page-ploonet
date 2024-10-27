@@ -9,12 +9,13 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   disabled = false,
   color,
+  ...props
 }) => {
-  const baseClasses = 'inline-flex items-center font-semibold rounded focus:outline-none transition'
+  const baseClasses = 'md:inline-flex items-center font-semibold rounded focus:outline-none transition'
 
   const colorButton = color ? color.includes('#') ? `[${color}]` : color : ''
   const variantClasses = {
-    primary: 'bg-blue-500 text-white hover:bg-blue-600 disabled:bg-blue-300',
+    primary: 'bg-[#FF6D51] px-8 py-4 text-white hover:bg-[#d0391d] disabled:bg-[#ee7e69]',
     text: `${color && `text-${colorButton}`} hover:text-white`,
   }
 
@@ -27,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
 
   return (
-    <button onClick={onClick} className={classes} disabled={disabled}>
+    <button onClick={onClick} className={classes} disabled={disabled} {...props}>
       {children}
     </button>
   )

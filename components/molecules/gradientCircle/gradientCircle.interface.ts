@@ -1,4 +1,4 @@
 export interface GradientCircleProps {
-  title: string
+  title: string | React.ReactNode
   subTitle?: string
 }

@@ -18,9 +18,9 @@ const Gallery: React.FC<GalleryProps> = ({
   }
 
   return (
-    <div className="bg-black py-4 pt-20 text-center">
-      <Title title={title} isWithDot className="font-semibold mb-6"/>
-      <div className="grid grid-cols-4 gap-0 md:grid-cols-4 sm:grid-cols-2">
+    <div className="bg-black py-4 pt-10 md:pt-20 text-center">
+      <Title title={title} isWithDot className="font-semibold mb-6 max-md:text-xl"/>
+      <div className="grid grid-cols-4 gap-0 md:grid-cols-4 grid-cols-2">
         {images.map((image, index) => (
           <div key={index} className="cursor-pointer" onClick={() => openModal(image)}>
             <img src={image} alt={`Gallery ${index + 1}`} className="w-full h-auto object-cover" />

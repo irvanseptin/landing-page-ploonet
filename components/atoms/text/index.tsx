@@ -6,11 +6,14 @@ const Text: React.FC<TextProps> = ({
   children,
   className = '',
   isPrimary,
+  style = {},
+  ...props
 }) => {
   const baseClass = {
-    h1: 'text-[44px]',
+    h1: 'text-2xl md:text-[44px]',
     h2: 'text-3xl font-semibold',
-    h3: 'text-2xl',
+    h3: 'text-base md:text-2xl',
+    h4: 'text-xl',
     p: 'text-base',
     span: 'text-sm',
     small: 'text-xs',
@@ -24,7 +27,8 @@ const Text: React.FC<TextProps> = ({
       style={isPrimary ? {
         background: 'linear-gradient(96.34deg, #FF4E83 0.62%, #FFBB54 97.92%)',
         WebkitBackgroundClip: 'text',
-      } : {}}
+      } : style}
+      {...props}
     >
       {isPrimary ? (
         <span
