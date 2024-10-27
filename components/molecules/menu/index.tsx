@@ -43,8 +43,9 @@ const Menu: React.FC<MenuProps> = ({
         </div>
       ) : (
         <div className="block md:hidden flex flex-col items-start p-4 gap-4">
-          {menuList.map(menu => (
+          {menuList.map((menu, index) => (
             <Button
+            key={index}
               variant="text"
               className={buttonClass(menu?.isActive)}
               onClick={() => handleClick(menu.label)}
