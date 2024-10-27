@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
         className="font-semibold pb-0 md:pb-24"
       />
 
-      <div className="flex flex-col w-full md:w-[1610px] mx-auto md:flex-row gap-8 max-md:px-4 max-md:pt-0">
+      <div className="flex flex-col w-full md:w-[90%] mx-auto md:flex-row gap-8 max-md:px-4 max-md:pt-0">
         <div className="flex-1 md:bg-[#141414] md:border md:border-[#FFFFFF26] rounded-[20px] p-[3px]">
           <div className="max-md:p-4 md:p-24 pb-10">
             <Text variant="h1" className="max-md:font-black">{leftCardTitle}</Text>
@@ -31,8 +31,8 @@ const Card: React.FC<CardProps> = ({
           </div>
 
           {leftSteps?.map((step, index) => (
-            <div key={index} className="w-full md:w-[90%] mx-auto px-0 md:px-8 pb-3 items-center">
-              <div className="grid grid-cols-1 grid-cols-3 md:gap-4 bg-black border border-[#FFFFFF26] rounded-[15px] md:rounded-full px-4 md:px-16 py-2">
+            <div key={index} className="w-full md:w-[90%] mx-auto px-0 [600px]:px-8 pb-3 items-center">
+              <div className="grid grid-cols-1 grid-cols-3 md:gap-4 bg-black border border-[#FFFFFF26] rounded-[15px] md:rounded-full px-4 md:px-10 [600px]:px-16 py-2">
                 <div className="col-span-1 text-white p-2 md:p-4 items-center justify-center">
                   <Text variant="h4" className="max-md:text-xs font-bold text-left bg-gradient-to-r from-[#FF7E7E] to-[#F05F82] bg-clip-text text-transparent">{step?.label}</Text>
                   <Text variant="h3" className="text-lg md:text-xl text-left font-bold">{step?.title}</Text>
